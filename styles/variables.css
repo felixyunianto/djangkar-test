@@ -1,0 +1,15 @@
+:root {
+  --theme-palette-color-1: #0000fe;
+  --theme-palette-color-2: #2771f9;
+  --theme-palette-color-3: #e0e8ec;
+  --theme-palette-color-4: #3a4f66;
+  --theme-palette-color-5: #192a3d;
+  --theme-palette-color-6: #fafbfc;
+  --color-white: #fff;
+
+  /* Font Size */
+  --font-default: 15px;
+
+  /* Size */
+  --navbar-height: 84px;
+}
