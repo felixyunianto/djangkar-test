@@ -1,0 +1,120 @@
+.hero {
+  width: 100%;
+  padding: 32px;
+  margin-top: 100px;
+
+  .section {
+    max-width: 1280px;
+    margin: auto !important;
+    display: flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    justify-content: space-between;
+    height: 900px;
+    background-image: url("../../../../public/images/about-hero-image.webp") !important;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+
+    .text_container {
+      height: 100%;
+      padding: 90px 50px;
+      width: 332px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      z-index: 1;
+
+      .title {
+        font-size: 30px;
+        line-height: 48px;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        span {
+          color: var(--theme-palette-color-5);
+        }
+      }
+
+      .description {
+        font-size: 20px;
+        line-height: 32px;
+      }
+
+      .button {
+        padding: 14px 25px;
+        background-color: var(--theme-palette-color-5);
+        text-transform: uppercase;
+        outline: none;
+        border: none;
+        color: white;
+        font-weight: 600;
+        width: max-content;
+      }
+
+      &:first-child {
+        background-color: var(--theme-palette-color-2);
+      }
+
+      &:last-child {
+        color: var(--theme-palette-color-5);
+        font-weight: 500;
+        background-color: var(--theme-palette-color-3);
+      }
+    }
+
+    .image_container {
+      display: none;
+    }
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      align-items: flex-start;
+      background-position: top left !important;
+
+      .text_container {
+        .title {
+          font-size: 25px;
+          line-height: 32px;
+        }
+
+        .description {
+          font-size: 18px;
+          line-height: 24px;
+        }
+        &:last-child {
+          width: 100%;
+          padding: 50px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      height: auto;
+      background: none !important;
+      gap: 24px;
+
+      .text_container {
+        padding: 50px;
+        width: 100%;
+        height: auto;
+        text-align: center;
+
+        .button {
+          margin: auto !important
+        }
+      }
+
+      .image_container {
+        display: block;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+        }
+      }
+    }
+  }
+}

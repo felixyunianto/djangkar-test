@@ -38,17 +38,13 @@ export default function Navbar() {
       <div
         className={cn(
           styles.bg_nav,
-          (navBg ||
-            (pathname !== "/" && pathname !== "/contact-us")) &&
-            styles.active
+          (navBg || pathname !== "/") && styles.active
         )}
       />
       <div
         className={cn(
           styles.navbar_container,
-          (navBg ||
-            (pathname !== "/" && pathname !== "/contact-us")) &&
-            styles.with_bg
+          (navBg || pathname !== "/") && styles.with_bg
         )}
       >
         <div className={styles.logo}>
@@ -111,7 +107,6 @@ export default function Navbar() {
         <div
           className={cn(
             styles.burger_menu,
-            pathname === "/contact-us" && styles.burger_contact,
             isOpen && styles.active
           )}
           onClick={toggleMenu}

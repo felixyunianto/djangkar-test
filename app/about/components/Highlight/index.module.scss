@@ -1,0 +1,112 @@
+.highlight {
+  width: 100%;
+  background-color: var(--theme-palette-color-6);
+  display: flex;
+  align-items: center;
+  padding: 32px;
+  letter-spacing: 0.5px;
+
+  .section {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto !important;
+    margin-bottom: 50px;
+    overflow: hidden;
+    min-height: 600px;
+
+    [class*="slick-prev"] {
+      z-index: 2;
+      left: 10px;
+      width: 20px;
+
+      &::before {
+        font-size: 32px;
+      }
+    }
+
+    [class*="slick-next"] {
+      z-index: 2;
+      right: 20px;
+      width: 20px;
+
+      &::before {
+        font-size: 32px;
+      }
+    }
+
+    .carousel_item {
+      width: 100%;
+      display: flex !important;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 8px;
+
+      [class*="slick-slide"] {
+        display: flex;
+        align-items: center;
+      }
+
+      .text_container {
+        padding: 32px;
+        width: 35%;
+        background-color: var(--theme-palette-color-3);
+        height: 500px;
+
+        .title {
+          font-size: 30px;
+          line-height: 48px;
+          font-weight: 600;
+          margin-bottom: 50px;
+        }
+
+        .description {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+
+      .image_container {
+        width: 65%;
+        height: 500px;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .carousel_item {
+        .text_container {
+          .title {
+            font-size: 25px;
+            line-height: 32px;
+          }
+
+          .description {
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .carousel_item {
+        flex-direction: column;
+
+        .text_container {
+          width: 100%;
+          max-height: 380px;
+        }
+
+        .image_container {
+          width: 100%;
+          height: 500px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+
+    span {
+      color: red;
+    }
+  }
+
+  textarea,
+  input {
+    border: 1px solid var(--theme-palette-color-3);
+    outline: none;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 8px;
+    height: 50px;
+    font-size: 16px;
+    font-family: "Legend", sans-serif;
+    letter-spacing: 0.8px;
+
+    &:focus {
+      border: 1px solid var(--theme-palette-color-2);
+    }
+  }
+
+  textarea {
+    min-height: 200px;
+    resize: none;
+  }
+
+  .helper_text {
+    margin-top: 8px;
+    font-style: italic;
+    font-size: 12px;
+  }
+}

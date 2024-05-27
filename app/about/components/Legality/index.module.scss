@@ -1,0 +1,71 @@
+.legality {
+  width: 100%;
+  background-color: var(--theme-palette-color-6);
+  display: flex;
+  align-items: center;
+  padding: 32px;
+
+  .section {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto !important;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    overflow: hidden;
+    justify-content: space-between;
+    gap: 24px;
+    overflow: hidden;
+
+    .container {
+      .title {
+        font-size: 30px;
+        color: var(--theme-palette-color-5);
+        letter-spacing: 0.5px;
+        font-weight: 600;
+      }
+
+      .list {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        padding: 24px 12px;
+        gap: 32px;
+
+        .item {
+          display: flex;
+          align-items: flex-start;
+          font-size: 16px;
+          color: var(--theme-palette-color-4);
+          font-weight: 500;
+
+          .label {
+            min-width: 130px;
+          }
+
+          .value {
+            max-width: 300px;
+          }
+        }
+      }
+    }
+
+    .image_container {
+      width: 55%;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .image_container{
+        width: 100%;
+      }
+    }
+  }
+}
